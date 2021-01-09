@@ -1,5 +1,5 @@
 const express = require('express');
-require('./services/passport.js');
+require('./services/passport');
 
 const app = express();
 require('./routes/authRoutes')(app);
