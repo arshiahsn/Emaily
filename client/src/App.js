@@ -9,16 +9,8 @@ function App() {
         <p>
           Hi, it's Arshia here!
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
       </header>
-      <a href="http://localhost:5000/auth/google">Sign In With Google</a>
+      <a href="/auth/google">Sign In With Google</a>
     </div>
   );
 }
