@@ -7,10 +7,11 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Hi, it's Arshia here!
+        <a href="/auth/google">Sign In With Google</a>
         </p>
+        
       </header>
-      <a href="/auth/google">Sign In With Google</a>
+      
     </div>
   );
 }
