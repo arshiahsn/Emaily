@@ -26,14 +26,14 @@ passport.use(new GoogleStrategy({
             
                 if(existingUser){
                     //Already have the user
-                    done(null, existingUser);
+                    return done(null, existingUser);
                 }
-                else{
-                    //No user
-                    const user = await new User({googleId: profile.id})
-                    .save()
-                    done(null, user);
-                }
+                
+                //No user
+                const user = await new User({googleId: profile.id})
+                .save()
+                done(null, user);
+                
             
     })
 );
