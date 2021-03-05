@@ -12,6 +12,4 @@ ReactDOM.render(
 <Provider store={store}>
     <App />
 </Provider>,
-
-
-<App />, document.querySelector('#root'));
+document.querySelector('#root'));
