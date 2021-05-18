@@ -1,12 +1,13 @@
 import React, {useEffect} from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
-import Header from './Header'
+import Header from './Header';
+import Landing from './Landing';
 import { useDispatch, useSelector } from 'react-redux';
 import {fetchUser} from '../actions';
 
 const Dashboard = () => <h2>Dashboard</h2>
 const SurveyNew = () => <h2>SurveyNew</h2>
-const Landing = () => <h2>Landing</h2>
+
 
 const App = () => {
 

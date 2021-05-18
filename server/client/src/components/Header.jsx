@@ -1,11 +1,12 @@
 import React, {Component} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
-
+import { Link } from 'react-router-dom';
 
 
 
 export default function Header(){
     const auth = useSelector(state => state.auth);
+
 
     function renderContent() {
         switch (auth) {
@@ -21,9 +22,12 @@ export default function Header(){
     return (
         <nav>
             <div className="nav-wrapper">
-                <a className="left brand-logo">
+                <Link 
+                to={auth ? '/surveys' : '/' } 
+                lassName="left brand-logo"
+                >
                 Emaily
-                </a>
+                </Link>
                 <ul className="right">
                     {renderContent()}
                 </ul>
