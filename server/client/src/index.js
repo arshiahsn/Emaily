@@ -8,7 +8,7 @@ import reduxThink from 'redux-thunk';
 import App from './components/App';
 import reducers from './reducers';
 
-const store = createStore(reducers,{},applyMiddleware());
+const store = createStore(reducers,{},applyMiddleware(reduxThink));
 
 ReactDOM.render(
 <Provider store={store}>
