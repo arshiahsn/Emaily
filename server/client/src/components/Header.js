@@ -1,10 +1,23 @@
 import React, {Component} from 'react';
-
+import {useDispatch, useSelector} from 'react-redux';
 
 
 
 
 export default function Header(){
+    const auth = useSelector(state => state.auth);
+
+    function renderContent() {
+        switch (auth) {
+            case null:
+                return;
+            case false:
+                return <li><a href="/auth/google">Login with Google</a></li>;
+            default:
+                return <li><a href="/api/logout">Logout</a></li>;
+        }
+    }
+
     return (
         <nav>
             <div className="nav-wrapper">
@@ -12,9 +25,7 @@ export default function Header(){
                 Emaily
                 </a>
                 <ul className="right">
-                    <li>
-                        <a>Login With Google</a>
-                    </li>
+                    {renderContent()}
                 </ul>
             </div>
         </nav>
