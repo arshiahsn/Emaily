@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 import { Link } from 'react-router-dom';
-
+import Payments from './Payments';
 
 
 export default function Header(){
@@ -15,7 +15,11 @@ export default function Header(){
             case false:
                 return <li><a href="/auth/google">Login with Google</a></li>;
             default:
-                return <li><a href="/api/logout">Logout</a></li>;
+                return [
+                    <li key="1"><Payments/></li>,
+                    <li key="2"><a href="/api/logout">Logout</a></li>
+                
+                ];
         }
     }
 
@@ -24,7 +28,7 @@ export default function Header(){
             <div className="nav-wrapper">
                 <Link 
                 to={auth ? '/surveys' : '/' } 
-                lassName="left brand-logo"
+                className="left brand-logo"
                 >
                 Emaily
                 </Link>
